@@ -3,7 +3,12 @@ var router = express.Router();
 
 /* GET sum of x and y. */
 router.get('/', function(req, res, next) {
-  res.send('sum');
+
+  var x = req.param('x');
+  var y = req.param('y');
+
+  //string
+  res.send({sum: x+y});
 });
 
 module.exports = router;
