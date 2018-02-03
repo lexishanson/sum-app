@@ -3,3 +3,7 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  p Enter a cURL request at the /test route with a number value for "x" and "y" and the sum will be returned.
+  h2 For Example:
+  p curl -X POST https://lexis-lyft-app.herokuapp.com/test --data '{"x": 4, "y": 2}' -H 'Content-Type: application/json'
+  p >> {"sum":6}
