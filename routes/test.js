@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET sum of x and y. */
-router.get('/', function(req, res, next) {
+router.get('/test', function(req, res, next) {
 
   var x = req.param('x');
   var y = req.param('y');
