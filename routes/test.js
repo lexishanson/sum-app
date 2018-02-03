@@ -1,14 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
 router.post('/', function(req, res, next) {
-  var x = parseInt(req.body.x);
-  var y = parseInt(req.body.y);
-  var sum = x + y;
+  const x = parseInt(req.body.x);
+  const y = parseInt(req.body.y);
+  const sum = x + y;
 
   // check that x and y are not undefined after parseInt
   x && y
