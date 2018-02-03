@@ -9,8 +9,10 @@ router.post('/', function(req, res, next) {
   var x = parseInt(req.body.x);
   var y = parseInt(req.body.y);
   var sum = x + y;
-  res.send({sum});
 
+  typeof x === "number" && typeof y === "number"
+  ? res.json({sum})
+  : res.send("Enter a valid number for x and y to return the sum");
 });
 
 module.exports = router;
