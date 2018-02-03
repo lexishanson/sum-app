@@ -1,14 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET sum of x and y. */
-router.get('/test', function(req, res, next) {
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
+});
 
-  var x = req.param('x');
-  var y = req.param('y');
+router.post('/', function(req, res, next) {
+  var x = parseInt(req.body.x);
+  var y = parseInt(req.body.y);
+  var sum = x + y;
+  res.send({sum});
 
-  //string
-  res.send({sum: x+y});
 });
 
 module.exports = router;
